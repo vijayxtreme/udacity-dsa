@@ -1,0 +1,46 @@
+Task0
+# O(1) Time - retrieving the first and last records are constant time operations
+# O(1) Space - the space for the call list is constant.
+
+Task1
+# O(N) Time - has to loop through all text and call records, which is O(2N)
+# but dropping constants brings this to O(N) Time
+# O(1) Space - fixed amount of space for the text and call records
+
+Task2
+# O(N) Time - even though we iterate through a fixed range 2 columns to get the 
+# outgoing caller and the incoming caller per loop, it's a constant iteration
+# so this is just O(N*2) which after dropping the constant becomes O(N)
+# O(1) Space - for just a few variables and the call list
+
+Task3
+# PART A
+# O(N log N) Time complexity - has to iterate through all calls and 
+# do constant time checks on whether call is from Bangalore
+# then add to calls_by_bangalore dict.  Printing in lexigraphical order
+# using sorted is an O(N log N) operation worst case
+
+# O(N) Space - space for the dict and adding each unique area code
+
+# PART B
+# O(1) Constant Time - getting the percent is just running 
+# our percent_of_bangalore_calls_to_other calls function
+# which looks up calls_by_bangalore["(080)"] (total calls made to bangalore)
+# and divides it by total calls in calls_by_bangalore["total_calls"]
+
+# O(1) Space - No extra space needed to perform this calculation
+
+Task4
+
+# Runs O(N log N) Time - searching for telemarketers is just looping through
+# N records for calls, adding them to a set of outgoing calls or non_telemarketers
+# then going through another loop with N records for texts, and adding
+# cols to the non_telemarketers set.
+# Two for loops is O(2N), which is simply O(N).  
+# Calculating the difference between outgoing and non_telemarketers to get
+# telemarketers is a O(1) operation.
+# Sorting takes O(N log N) worst case, so this is the bigger
+# time operation making this operation O(N log N).
+
+# O(N) space - just need space for the dictionary and set that
+# hold the unique callers and telemarketers
