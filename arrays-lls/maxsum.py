@@ -24,9 +24,7 @@ def max_sum_subarray(arr):
         sum = max(sum + item, item)
         max_sum = max(sum, max_sum)
 
-    return max_sum
-        
-    
+    return max_sum      
 
 arr = [1, 2, 3, -4, 6]
 print(max_sum_subarray(arr))

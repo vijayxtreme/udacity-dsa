@@ -7,4 +7,12 @@ To know more about Pascal's triangle: https://www.mathsisfun.com/pascals-triangl
 '''
 
 def nth_row_pascal(n):
+    '''
+    pascal works in 11^n, so just have to get the value and create an array
+    tricky stuff is when we go over 5 -- then we have to do something more manual,
+    hence no easy answer for this.
+
+    o(n^2) -- for now i'm okay with this.  i'll explore later, move on.
+    '''
+
     pass
